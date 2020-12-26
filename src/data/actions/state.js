@@ -1,5 +1,5 @@
 export const addTeam = ( data, teamNum ) => {
-    
+
     if ( teamNum === 1 ) {
         return {
             type:"ADD_TEAM1",
@@ -14,3 +14,10 @@ export const addTeam = ( data, teamNum ) => {
         }
     }
 }
+
+export const incrementPlayerNum = ( increment ) => (
+    {
+        type: "INCREMENT_PLAYER_NUM",
+        increment: increment,
+    }
+);

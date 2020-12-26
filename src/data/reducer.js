@@ -21,6 +21,30 @@ const addTeam2 = ( state, action ) => {
     }
 }
 
+const incPlayerQty = ( state, action ) => {
+    let { increment } = action;
+    let { playerQty } = state;
+    let next = playerQty + increment;
+
+    if (next < 2) {
+        return {
+            ...state,
+        }
+
+    } else if (next > 22){
+        return {
+            ...state,
+        }
+
+    } else {
+        return {
+            ...state,
+            playerQty: state.playerQty + action.increment,
+        }
+        
+    }
+}
+
 // Reducer
 const reducer = (state, action) => {
     switch (action.type) {
@@ -30,6 +54,8 @@ const reducer = (state, action) => {
             return addTeam1( state, action );
         case "ADD_TEAM2":
             return addTeam2( state, action );
+        case "INCREMENT_PLAYER_NUM":
+            return incPlayerQty( state, action );
         default:
             return state;
     }

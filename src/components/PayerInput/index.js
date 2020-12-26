@@ -2,7 +2,7 @@ import PlayerInput from "./PlayerInput";
 
 import { connect } from "react-redux";
 
-//  import { addTeam } from "../../data/actions/state";
+import { incrementPlayerNum } from "../../data/actions/state";
 
 const mapStateToProps = ( state ) => {
     return {
@@ -14,7 +14,7 @@ const mapStateToProps = ( state ) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        incrementPlayers: (increment) => console.log(increment),
+        incrementPlayers: (increment) => dispatch( incrementPlayerNum( increment ) ),
     };
 };
 
