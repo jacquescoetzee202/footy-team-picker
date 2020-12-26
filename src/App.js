@@ -1,13 +1,14 @@
 import React from 'react';
 import './styles/index.css';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import history from "./history";
 
 import Team1Input from "./components/TeamInput/Team1Input";
 import Team2Input from "./components/TeamInput/Team2Input";
 
 function App() {
   return (
-    <Router>
+    <Router history={ history }>
       <header>
         <h1>footy team picker!</h1>
       </header>
