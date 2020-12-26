@@ -2,10 +2,10 @@ import TeamInput from "./TeamInput";
 
 import { connect } from "react-redux";
 
-const mapStateToProps = (state) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        
+        handleAddTeam: (data) => console.log(data),
     };
 };
 
-export default connect(mapStateToProps)(TeamInput);
+export default connect(null,mapDispatchToProps)(TeamInput);
