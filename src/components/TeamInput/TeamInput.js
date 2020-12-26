@@ -1,5 +1,6 @@
 import { CirclePicker } from "react-color";
 import { Component } from "react";
+import history from "../../history";
 
 class TeamInput extends Component {
     constructor(props) {
@@ -36,6 +37,8 @@ class TeamInput extends Component {
             name:"",
             color:"",
         });
+
+        history.push(`/set-up/${ this.props.nextRoute }`);
     }
 
     render() {
