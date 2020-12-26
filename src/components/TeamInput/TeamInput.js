@@ -2,8 +2,8 @@ import { CirclePicker } from "react-color";
 import { Component } from "react";
 
 class TeamInput extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             name:"",
@@ -41,7 +41,7 @@ class TeamInput extends Component {
     render() {
         return(
             <div>
-                <h1>Team 1</h1>
+                <h1>Team { this.props.teamInput }</h1>
                 <form>
                     <label htmlFor="team-name">Name:</label>
                     <input

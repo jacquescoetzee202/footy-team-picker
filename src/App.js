@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/index.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import TeamInput from "./components/TeamInput";
+import Team1Input from "./components/TeamInput/Team1Input";
 
 function App() {
   return (
@@ -11,10 +11,10 @@ function App() {
         <h1>footy team picker!</h1>
       </header>
       <Route exact path="/set-up/team1">
-        <TeamInput />
+        <Team1Input />
       </Route>
       <Route exact path="/set-up/team2">
-        <TeamInput />
+        <Team1Input />
       </Route>
     </Router>
   );
