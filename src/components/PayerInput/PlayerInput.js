@@ -2,6 +2,21 @@ import { Component } from "react";
 
 class PlayerInput extends Component {
 
+    constructor(){
+        super();
+
+        this.handleAdd = this.handleAdd.bind(this);
+        this.handleSubtract = this.handleSubtract.bind(this);
+    }
+
+    handleAdd() {
+        this.props.incrementPlayers(2);
+    }
+
+    handleSubtract() {
+        this.props.incrementPlayers(-2);
+    }
+
     render() {
         let { playerQty } = this.props;
 
@@ -15,12 +30,14 @@ class PlayerInput extends Component {
             <>
                 <ul>
                     { playerInputs.map(( index ) => (
-                            <li>
+                            <li key={ index }>
                                 Player { index }
                             </li>
                         ))
                     }
                 </ul>
+                <button onClick={ this.handleAdd }>Add players</button>
+                <button onClick={ this.handleSubtract }>Remove players</button>
             </>
         );
     }

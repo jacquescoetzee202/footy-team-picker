@@ -11,12 +11,11 @@ const mapStateToProps = ( state ) => {
     }
 }
 
-/*
+
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleAddTeam: (data) => dispatch(),
+        incrementPlayers: (increment) => console.log(increment),
     };
 };
-*/
 
-export default connect( mapStateToProps )(PlayerInput);
+export default connect( mapStateToProps, mapDispatchToProps )(PlayerInput);
