@@ -2,7 +2,7 @@ import TeamInput from "./TeamInput";
 
 import { connect } from "react-redux";
 
-import { addTeam1 } from "../../data/actions/state";
+import { addTeam } from "../../data/actions/state";
 
 const mapStateToProps = ( state ) => {
     return {
@@ -12,7 +12,7 @@ const mapStateToProps = ( state ) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleAddTeam: (data) => dispatch(addTeam1(data)),
+        handleAddTeam: (data) => dispatch(addTeam( data, 2 )),
     };
 };
 

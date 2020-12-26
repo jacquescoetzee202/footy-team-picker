@@ -3,6 +3,7 @@ import './styles/index.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Team1Input from "./components/TeamInput/Team1Input";
+import Team2Input from "./components/TeamInput/Team2Input";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Team1Input />
       </Route>
       <Route exact path="/set-up/team2">
-        <Team1Input />
+        <Team2Input />
       </Route>
     </Router>
   );
