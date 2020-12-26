@@ -9,6 +9,14 @@ class TeamInput extends Component {
             name:"",
             color:"",
         }
+
+        this.colorChange = this.colorChange.bind(this);
+    }
+
+    colorChange(color, event) {
+        this.setState({
+            color: color.hex,
+        })
     }
 
     render() {
@@ -22,9 +30,9 @@ class TeamInput extends Component {
                         type="text"
                     >
                     </input>
-                    <button>Add team</button>
                 </form>
-                <CirclePicker/>
+                <CirclePicker color={ this.state.color } onChange={ this.colorChange }/>
+                <button>Add team</button>
             </div>
         );
     }
