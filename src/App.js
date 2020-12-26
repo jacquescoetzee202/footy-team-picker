@@ -18,6 +18,9 @@ function App() {
       <Route exact path="/set-up/team2">
         <Team2Input />
       </Route>
+      <Route exact path="/set-up/player">
+        <h1>player component to be created</h1>
+      </Route>
     </Router>
   );
 }
