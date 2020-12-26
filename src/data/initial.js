@@ -10,6 +10,7 @@ const initial = {
         kit_color: 2
     },
     players: [],
+    playerQty: 10,
 };
 
 export default initial;
