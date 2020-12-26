@@ -1,3 +1,5 @@
+import { CirclePicker } from "react-color";
+
 const TeamInput = () => (
     <div>
         <h1>Team 1</h1>
@@ -10,6 +12,7 @@ const TeamInput = () => (
             </input>
             <button>Add team</button>
         </form>
+        <CirclePicker/>
     </div>
 );
 
