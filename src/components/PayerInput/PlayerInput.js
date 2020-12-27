@@ -2,13 +2,16 @@ import { Component } from "react";
 
 class PlayerInput extends Component {
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
 
-        this.state = {
-            player_1: {},
-            player_2: {},
-        };
+        let stateObj = {};
+
+        for (let i = 1 ; i <= this.props.playerQty; i += 1 ){
+            stateObj[`player_${i}`] = { name:"", active: true };
+        }
+
+        this.state = stateObj;
 
         this.handleAdd = this.handleAdd.bind(this);
         this.handleSubtract = this.handleSubtract.bind(this);
@@ -16,17 +19,35 @@ class PlayerInput extends Component {
     }
 
     handleAdd() {
+        // add in the two new players to component local class state
+        let { playerQty } = this.props;
+        let key1 = `player_${ playerQty + 1 }`;
+        let key2 = `player_${ playerQty + 2 }`;
+        this.setState({ 
+            [ key1 ] : { name: "", active: true },
+            [ key2 ] : { name: "", active: true },
+        });
+        //update app state increasing number of players by 2
         this.props.incrementPlayers(2);
     }
 
     handleSubtract() {
+        //update app state decreasing number of players by 2
         this.props.incrementPlayers(-2);
+        //set the last two player inputs active property to false to demonstrate they are no longer in the display
+        let { playerQty } = this.props;
+        let key1 = `player_${ playerQty - 1 }`;
+        let key2 = `player_${ playerQty }`;
+        this.setState({ 
+            [ key1 ] : { name: "", active: false },
+            [ key2 ] : { name: "", active: false },
+        });
     }
 
     nameChange(event) {
         let ref = event.currentTarget.id;
         let name = event.currentTarget.value;
-        this.setState({ [ ref ] : { name: name }});
+        this.setState({ [ ref ] : { name: name, active: true }});
     }
 
     render() {
@@ -53,6 +74,7 @@ class PlayerInput extends Component {
                                         id={`player_${index}`}
                                         type="text"
                                         onChange={ this.nameChange }
+                                        value={ this.state[`player_${index}`].name }
                                     >
                                     </input>
                                 </form>
