@@ -26,6 +26,9 @@ class PlayerInput extends Component {
             playerInputs.push(i);
         }
 
+        let addDisable = playerQty > 20 ? true : false;
+        let subtractDisable = playerQty < 4 ? true : false;
+
         return(
             <>
                 <ul>
@@ -36,8 +39,8 @@ class PlayerInput extends Component {
                         ))
                     }
                 </ul>
-                <button onClick={ this.handleAdd }>Add players</button>
-                <button onClick={ this.handleSubtract }>Remove players</button>
+                <button onClick={ this.handleAdd } disabled={ addDisable }>Add players</button>
+                <button onClick={ this.handleSubtract } disabled={ subtractDisable }>Remove players</button>
             </>
         );
     }
