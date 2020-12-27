@@ -1,4 +1,5 @@
 import { Component } from "react";
+import ButtonGroup from "../ButtonGroup";
 
 class PlayerInput extends Component {
 
@@ -84,6 +85,7 @@ class PlayerInput extends Component {
                 </ul>
                 <button onClick={ this.handleAdd } disabled={ addDisable }>Add players</button>
                 <button onClick={ this.handleSubtract } disabled={ subtractDisable }>Remove players</button>
+                <ButtonGroup />
             </>
         );
     }
