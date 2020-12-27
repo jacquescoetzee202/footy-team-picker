@@ -5,8 +5,14 @@ class PlayerInput extends Component {
     constructor(){
         super();
 
+        this.state = {
+            player_1: {},
+            player_2: {},
+        };
+
         this.handleAdd = this.handleAdd.bind(this);
         this.handleSubtract = this.handleSubtract.bind(this);
+        this.nameChange = this.nameChange.bind(this);
     }
 
     handleAdd() {
@@ -15,6 +21,12 @@ class PlayerInput extends Component {
 
     handleSubtract() {
         this.props.incrementPlayers(-2);
+    }
+
+    nameChange(event) {
+        let ref = event.currentTarget.id;
+        let name = event.currentTarget.value;
+        this.setState({ [ ref ] : { name: name }});
     }
 
     render() {
@@ -35,6 +47,15 @@ class PlayerInput extends Component {
                     { playerInputs.map(( index ) => (
                             <li key={ index }>
                                 Player { index }
+                                <form>
+                                    <label htmlFor={`player_${index}`}>Name:</label>
+                                    <input
+                                        id={`player_${index}`}
+                                        type="text"
+                                        onChange={ this.nameChange }
+                                    >
+                                    </input>
+                                </form>
                             </li>
                         ))
                     }
