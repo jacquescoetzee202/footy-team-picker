@@ -18,9 +18,11 @@ class PlayerInput extends Component {
         this.handleSubtract = this.handleSubtract.bind(this);
         this.nameChange = this.nameChange.bind(this);
         this.ratingClick = this.ratingClick.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleAdd() {
+    handleAdd(event) {
+        event.preventDefault();
         // add in the two new players to component local class state
         let { playerQty } = this.props;
         let key1 = `player_${ playerQty + 1 }`;
@@ -33,7 +35,8 @@ class PlayerInput extends Component {
         this.props.incrementPlayers(2);
     }
 
-    handleSubtract() {
+    handleSubtract(event) {
+        event.preventDefault();
         //update app state decreasing number of players by 2
         this.props.incrementPlayers(-2);
         //set the last two player inputs active property to false to demonstrate they are no longer in the display
@@ -53,6 +56,7 @@ class PlayerInput extends Component {
     }
 
     ratingClick(event) {
+        event.preventDefault();
         let selected = event.currentTarget.dataset.rating;
         let ref = event.currentTarget.dataset.id;
 
@@ -60,6 +64,10 @@ class PlayerInput extends Component {
 
         console.log(selected);
         console.log(event.currentTarget.dataset.id);
+    }
+
+    handleSubmit() {
+        console.log(this.state);
     }
 
     render() {
@@ -76,32 +84,34 @@ class PlayerInput extends Component {
 
         return(
             <>
-                <ul>
-                    { playerInputs.map(( index ) => (
-                            <li key={ index }>
-                                Player { index }
-                                <form>
-                                    <label htmlFor={`player_${index}`}>Name:</label>
-                                    <input
+                <form onSubmit={ this.handleSubmit }>
+                    <ul>
+                        { playerInputs.map(( index ) => (
+                                <li key={ index }>
+                                    Player { index }
+                                        <label htmlFor={`player_${index}`}>Name:</label>
+                                        <input
+                                            required
+                                            id={`player_${index}`}
+                                            type="text"
+                                            onChange={ this.nameChange }
+                                            value={ this.state[`player_${index}`].name }
+                                        >
+                                        </input>
+                                    <ButtonGroup 
+                                        handleClick={ this.ratingClick }
+                                        selected={ this.state[`player_${index}`].rating }
                                         id={`player_${index}`}
-                                        type="text"
-                                        onChange={ this.nameChange }
-                                        value={ this.state[`player_${index}`].name }
-                                    >
-                                    </input>
-                                </form>
-                                <ButtonGroup 
-                                    handleClick={ this.ratingClick }
-                                    selected={ this.state[`player_${index}`].rating }
-                                    id={`player_${index}`}
-                                    skill="skill"
-                                />
-                            </li>
-                        ))
-                    }
-                </ul>
-                <button onClick={ this.handleAdd } disabled={ addDisable }>Add players</button>
-                <button onClick={ this.handleSubtract } disabled={ subtractDisable }>Remove players</button>
+                                        skill="skill"
+                                        />
+                                </li>
+                            ))
+                        }
+                    </ul>
+                    <button onClick={ this.handleAdd } disabled={ addDisable }>Add players</button>
+                    <button onClick={ this.handleSubtract } disabled={ subtractDisable }>Remove players</button>
+                    <button className="submit">Submit</button>
+                </form>
             </>
         );
     }
