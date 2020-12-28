@@ -1,5 +1,6 @@
 import { Component } from "react";
 import ButtonGroup from "../ButtonGroup";
+import history from "../../history";
 
 class PlayerInput extends Component {
 
@@ -81,6 +82,8 @@ class PlayerInput extends Component {
         console.log(playerArray);
 
         this.props.submitPlayers(playerArray);
+
+        history.push("/teams");
     }
 
     render() {

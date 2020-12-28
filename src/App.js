@@ -22,6 +22,9 @@ function App() {
       <Route exact path="/set-up/player">
         <PlayerInput />
       </Route>
+      <Route exact path="/teams">
+        <h1>Selected teams</h1>
+      </Route>
     </Router>
   );
 }
