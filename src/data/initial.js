@@ -11,6 +11,7 @@ const initial = {
     },
     players: [],
     playerQty: 10,
+    randomSort: false,
 };
 
 export default initial;
