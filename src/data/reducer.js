@@ -45,6 +45,14 @@ const incPlayerQty = ( state, action ) => {
     }
 }
 
+const addPlayers = ( state, { players } ) => {
+    console.log( players );
+    return {
+        ...state,
+        players: players,
+    }
+}
+
 // Reducer
 const reducer = (state, action) => {
     switch (action.type) {
@@ -56,6 +64,8 @@ const reducer = (state, action) => {
             return addTeam2( state, action );
         case "INCREMENT_PLAYER_NUM":
             return incPlayerQty( state, action );
+        case "SAVE_PLAYERS":
+            return addPlayers( state, action );
         default:
             return state;
     }

@@ -21,3 +21,10 @@ export const incrementPlayerNum = ( increment ) => (
         increment: increment,
     }
 );
+
+export const savePlayers = ( data ) => (
+    {
+        type: "SAVE_PLAYERS",
+        players: data,
+    }
+);
