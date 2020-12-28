@@ -28,3 +28,9 @@ export const savePlayers = ( data ) => (
         players: data,
     }
 );
+
+export const toggleSort = () => (
+    {
+        type: "TOGGLE_SORT",
+    }
+);

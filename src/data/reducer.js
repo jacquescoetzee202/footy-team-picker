@@ -76,6 +76,13 @@ const eqaulTeams = ( players ) => {
     }
 }
 
+const toggleSort = ( state ) => {
+    return {
+        ...state,
+        randomSort: !state.randomSort,
+    }
+}
+
 // Reducer
 const reducer = (state, action) => {
     switch (action.type) {
@@ -89,6 +96,8 @@ const reducer = (state, action) => {
             return incPlayerQty( state, action );
         case "SAVE_PLAYERS":
             return addPlayers( state, action );
+        case "TOGGLE_SORT":
+            return toggleSort( state );
         default:
             return state;
     }

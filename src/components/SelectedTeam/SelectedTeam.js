@@ -10,7 +10,6 @@ const SelectedTeam = ({ teamObj }) => {
                         </li>
                 ))}
             </ul>
-
         </div>
     )
 }
