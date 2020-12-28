@@ -52,7 +52,7 @@ class PlayerInput extends Component {
     nameChange(event) {
         let ref = event.currentTarget.id;
         let name = event.currentTarget.value;
-        this.setState({ [ ref ] : { name: name, active: true, rating: this.state[ ref ].rating }});
+        this.setState({ [ ref ] : { name: name, active: true, rating: +this.state[ ref ].rating }});
     }
 
     ratingClick(event) {
@@ -60,14 +60,25 @@ class PlayerInput extends Component {
         let selected = event.currentTarget.dataset.rating;
         let ref = event.currentTarget.dataset.id;
 
-        this.setState({ [ ref ] : { ...this.state[ ref ], rating: selected }});
-
-        console.log(selected);
-        console.log(event.currentTarget.dataset.id);
+        this.setState({ [ ref ] : { ...this.state[ ref ], rating: +selected }});
     }
 
-    handleSubmit() {
-        console.log(this.state);
+    handleSubmit(event) {
+        event.preventDefault();
+
+        let currentState = this.state;
+
+        let playerArray = [];
+
+        for (const playerKey in currentState) {
+            let player = currentState[playerKey];
+
+            if (player.active) {
+                playerArray.push(player);
+            }
+        }
+
+        console.log(playerArray);
     }
 
     render() {
