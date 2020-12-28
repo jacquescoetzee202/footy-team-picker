@@ -6,6 +6,7 @@ import history from "./history";
 import Team1Input from "./components/TeamInput/Team1Input";
 import Team2Input from "./components/TeamInput/Team2Input";
 import PlayerInput from './components/PayerInput';
+import SelectedTeam from './components/SelectedTeam';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <PlayerInput />
       </Route>
       <Route exact path="/teams">
-        <h1>Selected teams</h1>
+        <SelectedTeam/>
       </Route>
     </Router>
   );
