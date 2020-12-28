@@ -1,4 +1,19 @@
+.btn-group {
+    display: flex;
+    align-items: center;
+}
+
+.btn-group__label {
+    margin-right: 1em;
+    text-transform: capitalize;
+}
+
+.btn-group__btn {
+    height: 2em;
+}
+
 .selected {
     background-color: blue;
     color: white;
 }
+

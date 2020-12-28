@@ -94,6 +94,7 @@ class PlayerInput extends Component {
                                     handleClick={ this.ratingClick }
                                     selected={ this.state[`player_${index}`].rating }
                                     id={`player_${index}`}
+                                    skill="skill"
                                 />
                             </li>
                         ))

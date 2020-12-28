@@ -1,11 +1,13 @@
-const ButtonGroup = ({ handleClick, selected, id }) => {
+const ButtonGroup = ({ handleClick, selected, id, skill }) => {
     return(
         <div className="btn-group">
+            <div className="btn-group__label"><p>{ skill }:</p></div>
             <button 
                 onClick={ handleClick }
                 data-rating={ 1 }
                 data-id={ id }
-                className={ +selected === 1 ? "selected" : "" }
+                date-skill={ skill }
+                className={`btn-group__btn ${ +selected === 1 ? "selected" : "" }`}
             >
                 ⭐
             </button>
@@ -13,7 +15,8 @@ const ButtonGroup = ({ handleClick, selected, id }) => {
                 onClick={ handleClick }
                 data-rating={ 2 }
                 data-id={ id }
-                className={ +selected === 2 ? "selected" : "" }
+                date-skill={ skill }
+                className={`btn-group__btn ${ +selected === 2 ? "selected" : "" }`}
             >
                 ⭐⭐
             </button>
@@ -21,7 +24,8 @@ const ButtonGroup = ({ handleClick, selected, id }) => {
                 onClick={ handleClick }
                 data-rating={ 3 }
                 data-id={ id }
-                className={ +selected === 3 ? "selected" : "" }
+                date-skill={ skill }
+                className={`btn-group__btn ${ +selected === 3 ? "selected" : "" }`}
             >
                 ⭐⭐⭐
             </button>
