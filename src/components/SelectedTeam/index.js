@@ -5,11 +5,9 @@ import { connect } from "react-redux";
 // import { incrementPlayerNum, savePlayers } from "../../data/actions/state";
 
 const mapStateToProps = ( state ) => {
-    let { players, team1, team2 } = state;
+    let { team1 } = state;
     return {
-        players,
-        team1,
-        team2,
+        teamObj: team1,
     }
 }
 
