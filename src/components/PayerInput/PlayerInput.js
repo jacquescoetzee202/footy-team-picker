@@ -51,6 +51,11 @@ class PlayerInput extends Component {
         this.setState({ [ ref ] : { name: name, active: true }});
     }
 
+    ratingClick(event) {
+        let selected = event.currentTarget.dataset.rating;
+        console.log(selected);
+    }
+
     render() {
         let { playerQty } = this.props;
 
@@ -79,13 +84,13 @@ class PlayerInput extends Component {
                                     >
                                     </input>
                                 </form>
+                                <ButtonGroup handleClick={ this.ratingClick } selected={ 1 }/>
                             </li>
                         ))
                     }
                 </ul>
                 <button onClick={ this.handleAdd } disabled={ addDisable }>Add players</button>
                 <button onClick={ this.handleSubtract } disabled={ subtractDisable }>Remove players</button>
-                <ButtonGroup />
             </>
         );
     }

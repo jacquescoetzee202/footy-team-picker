@@ -1,22 +1,22 @@
-const ButtonGroup = ({ ratingClick, selected }) => {
+const ButtonGroup = ({ handleClick, selected }) => {
     return(
         <div className="btn-group">
             <button 
-                onClick={ ratingClick }
+                onClick={ handleClick }
                 data-rating={ 1 }
                 className={ selected === 1 ? "selected" : "" }
             >
                 ⭐
             </button>
             <button 
-                onClick={ ratingClick }
+                onClick={ handleClick }
                 data-rating={ 2 }
                 className={ selected === 2 ? "selected" : "" }
             >
                 ⭐⭐
             </button>
             <button 
-                onClick={ ratingClick }
+                onClick={ handleClick }
                 data-rating={ 3 }
                 className={ selected === 3 ? "selected" : "" }
             >
