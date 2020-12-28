@@ -46,10 +46,33 @@ const incPlayerQty = ( state, action ) => {
 }
 
 const addPlayers = ( state, { players } ) => {
-    console.log( players );
+    
+    let { team1, team2 } = eqaulTeams(players);
+
     return {
         ...state,
         players: players,
+        team1: { ...state.team1, players: team1 },
+        team2: { ...state.team2, players: team2 },
+    }
+}
+
+const eqaulTeams = ( players ) => {
+    let team1 = [];
+    let team2 = [];
+    let ranked = players.sort((a,b) => b.rating - a.rating );
+
+    ranked.forEach(( player, index ) => {
+        if (index % 2 === 0) {
+            team1.push(player);
+        } else {
+            team2.push(player);
+        }
+    });
+
+    return {
+        team1: team1,
+        team2: team2,
     }
 }
 

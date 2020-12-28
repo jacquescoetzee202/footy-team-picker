@@ -79,8 +79,6 @@ class PlayerInput extends Component {
             }
         }
 
-        console.log(playerArray);
-
         this.props.submitPlayers(playerArray);
 
         history.push("/teams");
