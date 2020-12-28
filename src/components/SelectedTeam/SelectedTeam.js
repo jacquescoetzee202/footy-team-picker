@@ -6,7 +6,7 @@ const SelectedTeam = ({ teamObj }) => {
             <ul>
                 { teamObj.players.map(( player, index ) => (
                         <li key={ index }>
-                            {player.name} { index === 0 ? "⭐" : null } 
+                            {player.name} { index === 0 && player.rating === 3 ? "⭐" : null } 
                         </li>
                 ))}
             </ul>
