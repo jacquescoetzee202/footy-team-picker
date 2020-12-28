@@ -9,7 +9,7 @@ class PlayerInput extends Component {
         let stateObj = {};
 
         for (let i = 1 ; i <= this.props.playerQty; i += 1 ){
-            stateObj[`player_${i}`] = { name:"", active: true };
+            stateObj[`player_${i}`] = { name:"", active: true, rating: 0 };
         }
 
         this.state = stateObj;
@@ -17,6 +17,7 @@ class PlayerInput extends Component {
         this.handleAdd = this.handleAdd.bind(this);
         this.handleSubtract = this.handleSubtract.bind(this);
         this.nameChange = this.nameChange.bind(this);
+        this.ratingClick = this.ratingClick.bind(this);
     }
 
     handleAdd() {
@@ -25,8 +26,8 @@ class PlayerInput extends Component {
         let key1 = `player_${ playerQty + 1 }`;
         let key2 = `player_${ playerQty + 2 }`;
         this.setState({ 
-            [ key1 ] : { name: "", active: true },
-            [ key2 ] : { name: "", active: true },
+            [ key1 ] : { name: "", active: true, rating: 0 },
+            [ key2 ] : { name: "", active: true, rating: 0 },
         });
         //update app state increasing number of players by 2
         this.props.incrementPlayers(2);
@@ -40,20 +41,25 @@ class PlayerInput extends Component {
         let key1 = `player_${ playerQty - 1 }`;
         let key2 = `player_${ playerQty }`;
         this.setState({ 
-            [ key1 ] : { name: "", active: false },
-            [ key2 ] : { name: "", active: false },
+            [ key1 ] : { name: "", active: false, rating: 0 },
+            [ key2 ] : { name: "", active: false, rating: 0 },
         });
     }
 
     nameChange(event) {
         let ref = event.currentTarget.id;
         let name = event.currentTarget.value;
-        this.setState({ [ ref ] : { name: name, active: true }});
+        this.setState({ [ ref ] : { name: name, active: true, rating: this.state[ ref ].rating }});
     }
 
     ratingClick(event) {
         let selected = event.currentTarget.dataset.rating;
+        let ref = event.currentTarget.dataset.id;
+
+        this.setState({ [ ref ] : { ...this.state[ ref ], rating: selected }});
+
         console.log(selected);
+        console.log(event.currentTarget.dataset.id);
     }
 
     render() {
@@ -84,7 +90,11 @@ class PlayerInput extends Component {
                                     >
                                     </input>
                                 </form>
-                                <ButtonGroup handleClick={ this.ratingClick } selected={ 1 }/>
+                                <ButtonGroup 
+                                    handleClick={ this.ratingClick }
+                                    selected={ this.state[`player_${index}`].rating }
+                                    id={`player_${index}`}
+                                />
                             </li>
                         ))
                     }
