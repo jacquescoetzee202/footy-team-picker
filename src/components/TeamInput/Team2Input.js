@@ -7,7 +7,7 @@ import { addTeam } from "../../data/actions/state";
 const mapStateToProps = ( state ) => {
     return {
         teamInput: 2,
-        nextRoute: "player", 
+        nextRoute: "players", 
     }
 }
 

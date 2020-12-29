@@ -13,7 +13,7 @@ class TeamInput extends Component {
 
         this.colorChange = this.colorChange.bind(this);
         this.nameChange = this.nameChange.bind(this);
-        this.handleClick = this.handleClick.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     colorChange(color, event) {
@@ -28,7 +28,7 @@ class TeamInput extends Component {
         })
     }
 
-    handleClick(event) {
+    handleSubmit(event) {
         event.preventDefault();
         
         this.props.handleAddTeam({ ...this.state });
@@ -45,17 +45,18 @@ class TeamInput extends Component {
         return(
             <div>
                 <h1>Team { this.props.teamInput }</h1>
-                <form>
+                <form onSubmit={ this.handleSubmit }>
                     <label htmlFor="team-name">Name:</label>
                     <input
                         id="team-name"
                         type="text"
                         onChange={ this.nameChange }
+                        required
                     >
                     </input>
+                    <CirclePicker color={ this.state.color } onChange={ this.colorChange }/>
+                    <button>Add team</button>
                 </form>
-                <CirclePicker color={ this.state.color } onChange={ this.colorChange }/>
-                <button onClick={ this.handleClick }>Add team</button>
             </div>
         );
     }
