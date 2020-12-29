@@ -13,10 +13,10 @@ const NavProgress = () => {
                 <Link to="/set-up/team2">team 2</Link>
             </li>
             <li>
-                <Link to="/set-up/players">player</Link>
+                <Link to="/set-up/players">players</Link>
             </li>
             <li>
-                <Link to="/set-up/teams">selections</Link>
+                <Link to="/teams">selections</Link>
             </li>
         </ul>
     )
