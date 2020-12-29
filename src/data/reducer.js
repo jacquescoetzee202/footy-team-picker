@@ -76,10 +76,47 @@ const eqaulTeams = ( players ) => {
     }
 }
 
+const randomTeams = ( players ) => {
+    let playersCopy = [...players];
+
+    let team1 = [];
+    let team2 = [];
+
+    while ( playersCopy.length > 1 ){
+        const random1 = Math.floor( Math.random() * playersCopy.length);
+
+        team1.push(playersCopy.splice( random1 , 1 )[0]);
+
+        const random2 = Math.floor( Math.random() * playersCopy.length);
+        
+        team2.push(playersCopy.splice( random2 , 1 )[0]);
+
+    }
+
+    return {
+        team1: team1,
+        team2: team2,
+    }
+}
+
 const toggleSort = ( state ) => {
+
+    let { players, randomSort } = state;
+    let sorted;
+
+    if ( randomSort ) {
+        sorted = {...eqaulTeams(players)};
+    } else {
+        sorted = {...randomTeams(players)};
+    }
+
+    let { team1, team2 } = sorted;
+
     return {
         ...state,
         randomSort: !state.randomSort,
+        team1: { ...state.team1, players: team1 },
+        team2: { ...state.team2, players: team2 },
     }
 }
 
