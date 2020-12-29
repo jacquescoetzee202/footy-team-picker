@@ -9,6 +9,8 @@ import PlayerInput from './components/PayerInput';
 import TeamOutput from "./components/TeamOutput";
 import NavProgress from "./components/NavProgress";
 import FourOhFour from './components/FourOhFour';
+import Home from './components/Home';
+
 
 function App() {
   return (
@@ -19,7 +21,7 @@ function App() {
       <NavProgress />
       <Switch>
         <Route exact path="/">
-          <h1>Home page infor and start button</h1>
+          <Home />
         </Route>
         <Route exact path="/set-up/team1">
           <Team1Input />
