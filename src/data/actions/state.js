@@ -29,8 +29,14 @@ export const savePlayers = ( data ) => (
     }
 );
 
-export const toggleSort = () => (
+export const equalSort = () => (
     {
-        type: "TOGGLE_SORT",
+        type: "EQUAL_SORT",
+    }
+);
+
+export const randomSort = () => (
+    {
+        type: "RANDOM_SORT",
     }
 );

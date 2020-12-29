@@ -99,24 +99,35 @@ const randomTeams = ( players ) => {
     }
 }
 
-const toggleSort = ( state ) => {
+const radomise = ( state ) => {
 
-    let { players, randomSort } = state;
-    let sorted;
+    let { players } = state;
 
-    if ( randomSort ) {
-        sorted = {...eqaulTeams(players)};
-    } else {
-        sorted = {...randomTeams(players)};
-    }
+    let randomised = randomTeams(players);
 
-    let { team1, team2 } = sorted;
+    let { team1, team2 } = randomised;
 
     return {
         ...state,
-        randomSort: !state.randomSort,
         team1: { ...state.team1, players: team1 },
         team2: { ...state.team2, players: team2 },
+        randomSort: true,
+    }
+}
+
+const equalise = ( state ) => {
+
+    let { players } = state;
+
+    let eqaulised = eqaulTeams(players);
+
+    let { team1, team2 } = eqaulised;
+
+    return {
+        ...state,
+        team1: { ...state.team1, players: team1 },
+        team2: { ...state.team2, players: team2 },
+        randomSort: false,
     }
 }
 
@@ -133,8 +144,10 @@ const reducer = (state, action) => {
             return incPlayerQty( state, action );
         case "SAVE_PLAYERS":
             return addPlayers( state, action );
-        case "TOGGLE_SORT":
-            return toggleSort( state );
+        case "EQUAL_SORT":
+            return equalise( state );
+        case "RANDOM_SORT":
+            return radomise( state );
         default:
             return state;
     }

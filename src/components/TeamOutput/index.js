@@ -2,7 +2,7 @@ import TeamOutput from "./TeamOutput";
 
 import { connect } from "react-redux";
 
-import { toggleSort } from "../../data/actions/state";
+import { equalSort, randomSort } from "../../data/actions/state";
 
 const mapStateToProps = ( state ) => {
 
@@ -13,7 +13,8 @@ const mapStateToProps = ( state ) => {
 
 const mapDispatchToProps = ( dispatch ) => {
     return {
-        sortClick: () => dispatch(toggleSort()),
+        sortClick: () => dispatch(equalSort()),
+        randomClick: () => dispatch(randomSort()),
     }
 }
 
