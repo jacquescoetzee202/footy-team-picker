@@ -18,6 +18,9 @@ function App() {
       </header>
       <NavProgress />
       <Switch>
+        <Route exact path="/">
+          <h1>Home page infor and start button</h1>
+        </Route>
         <Route exact path="/set-up/team1">
           <Team1Input />
         </Route>
