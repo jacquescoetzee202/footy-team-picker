@@ -19,6 +19,7 @@ const initial = {
         team2: false,
         players: false,
     },
+    currentStage: 1,
 };
 
 export default initial;

@@ -46,3 +46,9 @@ export const stateReset = () => (
         type: "RESET",
     }
 )
+
+export const updateNavStage = () => (
+    {
+        type: "NAV_UPDATE",
+    }
+)

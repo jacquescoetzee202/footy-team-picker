@@ -1,5 +1,7 @@
 import initialState from "./initial";
 
+import history from "../history";
+
 // Reducer helper functions
 const addTeam1 = ( state, action ) => {
     return {
@@ -142,6 +144,34 @@ const equalise = ( state ) => {
     }
 }
 
+const navUpdate = ( state ) => {
+    
+    let currentURL = history.location.pathname;
+
+    let currentStage;
+
+    if (currentURL === "/") {
+        currentStage = 1;
+    } 
+    else if (currentURL === "/set-up/team1") {
+        currentStage = 2;
+    }
+    else if (currentURL === "/set-up/team2") {
+        currentStage = 3;
+    }
+    else if (currentURL === "/set-up/players") {
+        currentStage = 4;
+    }
+    else if (currentURL === "/teams") {
+        currentStage = 5;
+    }
+
+    return {
+        ...state,
+        currentStage: currentStage,
+    }
+}
+
 // Reducer
 const reducer = (state, action) => {
     switch (action.type) {
@@ -159,6 +189,8 @@ const reducer = (state, action) => {
             return equalise( state );
         case "RANDOM_SORT":
             return radomise( state );
+        case "NAV_UPDATE":
+            return navUpdate( state );
         default:
             return state;
     }
