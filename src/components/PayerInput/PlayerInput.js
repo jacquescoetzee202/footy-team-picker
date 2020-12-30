@@ -79,9 +79,9 @@ class PlayerInput extends Component {
             }
         }
 
-        this.props.submitPlayers(playerArray);
-
         history.push("/teams");
+
+        this.props.submitPlayers(playerArray);
     }
 
     render() {

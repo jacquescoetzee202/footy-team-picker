@@ -174,11 +174,17 @@ const navUpdate = ( state ) => {
     }
 }
 
+const reset = ( state ) => (
+    {
+        ...state,
+    }
+)
+
 // Reducer
 const reducer = (state, action) => {
     switch (action.type) {
         case "RESET":
-            return navUpdate({ ...initialState });
+            return navUpdate(reset({ ...initialState }));
         case "ADD_TEAM1":
             return navUpdate(updateProgress(addTeam1( state, action )));
         case "ADD_TEAM2":
@@ -192,6 +198,8 @@ const reducer = (state, action) => {
         case "RANDOM_SORT":
             return radomise( state );
         case "NAV_UPDATE":
+            return navUpdate( state );
+        case "START":
             return navUpdate( state );
         default:
             return state;

@@ -12,10 +12,12 @@ class Home extends Component {
     handleClick() { 
 
         if (this.props.inProgress) {
+            history.push("/set-up/team1");
             this.props.reset();
+        } else {
+            history.push("/set-up/team1");
+            this.props.start();
         }
-        
-        history.push("/set-up/team1");
     }
 
     render() {

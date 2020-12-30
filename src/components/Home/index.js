@@ -2,7 +2,7 @@ import Home from "./Home";
 
 import { connect } from "react-redux";
 
-import { stateReset } from "../../data/actions/state";
+import { stateReset, start } from "../../data/actions/state";
 
 const mapStateToProps = ( state ) => {
 
@@ -17,6 +17,7 @@ const mapStateToProps = ( state ) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         reset: () => dispatch( stateReset() ),
+        start: () => dispatch( start() ),
     };
 };
 

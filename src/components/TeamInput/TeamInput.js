@@ -30,15 +30,15 @@ class TeamInput extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        
-        this.props.handleAddTeam({ ...this.state });
-        
+
         this.setState({
             name:"",
             color:"",
         });
 
         history.push(`/set-up/${ this.props.nextRoute }`);
+        
+        this.props.handleAddTeam({ ...this.state });
     }
 
     render() {
