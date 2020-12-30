@@ -21,6 +21,17 @@ const addTeam2 = ( state, action ) => {
     }
 }
 
+const updateProgress = ( state ) => {
+    return {
+        ...state,
+        progress: {
+            team1: state.team1.name.length > 0,
+            team2: state.team2.name.length > 0,
+            players: state.players.length > 0,
+        }
+    }
+}
+
 const incPlayerQty = ( state, action ) => {
     let { increment } = action;
     let { playerQty } = state;
@@ -137,13 +148,13 @@ const reducer = (state, action) => {
         case "RESET":
             return { ...initialState };
         case "ADD_TEAM1":
-            return addTeam1( state, action );
+            return updateProgress(addTeam1( state, action ));
         case "ADD_TEAM2":
-            return addTeam2( state, action );
+            return updateProgress(addTeam2( state, action ));
         case "INCREMENT_PLAYER_NUM":
             return incPlayerQty( state, action );
         case "SAVE_PLAYERS":
-            return addPlayers( state, action );
+            return updateProgress(addPlayers( state, action ));
         case "EQUAL_SORT":
             return equalise( state );
         case "RANDOM_SORT":
