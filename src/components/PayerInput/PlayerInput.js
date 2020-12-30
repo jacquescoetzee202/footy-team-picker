@@ -85,7 +85,7 @@ class PlayerInput extends Component {
     }
 
     render() {
-        let { playerQty } = this.props;
+        let { playerQty, filledIn } = this.props;
 
         // creating an array of 1 -> total number of players to map over in JSX return statement
         let playerInputs = [];
@@ -124,7 +124,7 @@ class PlayerInput extends Component {
                     </ul>
                     <button onClick={ this.handleAdd } disabled={ addDisable }>Add players</button>
                     <button onClick={ this.handleSubtract } disabled={ subtractDisable }>Remove players</button>
-                    <button className="submit">Submit</button>
+                    <button className="submit">{ filledIn ? "re-submit" : "submit" }</button>
                 </form>
             </>
         );

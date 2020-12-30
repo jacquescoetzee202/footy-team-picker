@@ -42,6 +42,9 @@ class TeamInput extends Component {
     }
 
     render() {
+
+        let filledIn = this.props.filledIn;
+
         return(
             <div>
                 <h1>Team { this.props.teamInput }</h1>
@@ -55,7 +58,7 @@ class TeamInput extends Component {
                     >
                     </input>
                     <CirclePicker color={ this.state.color } onChange={ this.colorChange }/>
-                    <button>Add team</button>
+                    <button>{ filledIn ? "update" : "add team" }</button>
                 </form>
             </div>
         );

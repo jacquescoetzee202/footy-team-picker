@@ -8,6 +8,7 @@ const mapStateToProps = ( state ) => {
     return {
         playerQty: state.playerQty,
         detailedSetUp: state.detailed,
+        filledIn: state.players.length > 0,
     }
 }
 

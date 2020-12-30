@@ -7,7 +7,8 @@ import { addTeam } from "../../data/actions/state";
 const mapStateToProps = ( state ) => {
     return {
         teamInput: 1,
-        nextRoute: "team2", 
+        nextRoute: "team2",
+        filledIn: state.team1.name.length > 0, 
     }
 }
 
