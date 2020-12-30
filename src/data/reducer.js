@@ -166,8 +166,6 @@ const navUpdate = ( state ) => {
         currentStage = 5;
     }
 
-    console.log(currentURL);
-
     return {
         ...state,
         currentStage: currentStage,
