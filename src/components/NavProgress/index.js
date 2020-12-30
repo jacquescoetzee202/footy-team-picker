@@ -2,10 +2,21 @@ import NavProgress from "./NavProgress";
 
 import { connect } from "react-redux";
 
+import history from "../../history";
+
 const mapStateToProps = ( state ) => {
     return {
         progress: state.progress,
     }
 }
 
-export default connect( mapStateToProps )(NavProgress);
+const mapDispatchToProps = ( dispatch ) => {
+    return {
+        linkClick: (event) => {
+            let route = event.currentTarget.dataset.route;
+            history.push( route );
+        },
+    }
+}
+
+export default connect( mapStateToProps, mapDispatchToProps )(NavProgress);

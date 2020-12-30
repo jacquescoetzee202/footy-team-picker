@@ -6,7 +6,7 @@ const ButtonGroup = ({ handleClick, selected, id, skill }) => {
                 onClick={ handleClick }
                 data-rating={ 1 }
                 data-id={ id }
-                date-skill={ skill }
+                data-skill={ skill }
                 className={`btn-group__btn ${ selected === 1 ? "selected" : "" }`}
             >
                 ⭐
@@ -15,7 +15,7 @@ const ButtonGroup = ({ handleClick, selected, id, skill }) => {
                 onClick={ handleClick }
                 data-rating={ 2 }
                 data-id={ id }
-                date-skill={ skill }
+                data-skill={ skill }
                 className={`btn-group__btn ${ selected === 2 ? "selected" : "" }`}
             >
                 ⭐⭐
@@ -24,7 +24,7 @@ const ButtonGroup = ({ handleClick, selected, id, skill }) => {
                 onClick={ handleClick }
                 data-rating={ 3 }
                 data-id={ id }
-                date-skill={ skill }
+                data-skill={ skill }
                 className={`btn-group__btn ${ selected === 3 ? "selected" : "" }`}
             >
                 ⭐⭐⭐
