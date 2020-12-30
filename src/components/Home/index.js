@@ -1,3 +1,23 @@
 import Home from "./Home";
 
-export default Home;
+import { connect } from "react-redux";
+
+import { stateReset } from "../../data/actions/state";
+
+const mapStateToProps = ( state ) => {
+
+    const { team1, team2, players } = state.progress;
+
+    return {
+        inProgress: team1 || team2 || players,
+    }
+}
+
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        reset: () => dispatch( stateReset() ),
+    };
+};
+
+export default connect( mapStateToProps, mapDispatchToProps )(Home);

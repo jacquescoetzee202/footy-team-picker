@@ -14,6 +14,7 @@ const mapDispatchToProps = ( dispatch ) => {
     return {
         linkClick: (event) => {
             let route = event.currentTarget.dataset.route;
+            dispatch();
             history.push( route );
         },
     }

@@ -27,7 +27,7 @@ const updateProgress = ( state ) => {
         progress: {
             team1: state.team1.name.length > 0,
             team2: state.team2.name.length > 0,
-            players: state.players.length > 0,
+            players: state.players && state.team1.players > 0,
         }
     }
 }

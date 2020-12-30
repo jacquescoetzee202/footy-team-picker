@@ -4,10 +4,12 @@ const initial = {
     team1: {
         name: "",
         kit_color: "#f44336",
+        players: [],
     },
     team2: {
         name: "",
         kit_color: "#2196f3",
+        players: [],
     },
     players: [],
     playerQty: 10,

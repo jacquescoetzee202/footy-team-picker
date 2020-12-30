@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import history from "../../history";
 
 const linkClick = (event) => {
@@ -44,7 +42,7 @@ const NavProgress = ({ progress }) => {
                 <button
                     className="nav-list__item__button" 
                     onClick={ linkClick }
-                    data-route="teams"
+                    data-route="/teams"
                     disabled={ !progress.players }
                 >teams</button>
             </li>

@@ -40,3 +40,9 @@ export const randomSort = () => (
         type: "RANDOM_SORT",
     }
 );
+
+export const stateReset = () => (
+    {
+        type: "RESET",
+    }
+)
