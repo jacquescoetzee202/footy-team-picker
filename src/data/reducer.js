@@ -29,7 +29,7 @@ const updateProgress = ( state ) => {
         progress: {
             team1: state.team1.name.length > 0,
             team2: state.team2.name.length > 0,
-            players: state.players && state.team1.players > 0,
+            players: state.players.length > 0,
         }
     }
 }
@@ -166,6 +166,8 @@ const navUpdate = ( state ) => {
         currentStage = 5;
     }
 
+    console.log(currentURL);
+
     return {
         ...state,
         currentStage: currentStage,
@@ -176,15 +178,15 @@ const navUpdate = ( state ) => {
 const reducer = (state, action) => {
     switch (action.type) {
         case "RESET":
-            return { ...initialState };
+            return navUpdate({ ...initialState });
         case "ADD_TEAM1":
-            return updateProgress(addTeam1( state, action ));
+            return navUpdate(updateProgress(addTeam1( state, action )));
         case "ADD_TEAM2":
-            return updateProgress(addTeam2( state, action ));
+            return navUpdate(updateProgress(addTeam2( state, action )));
         case "INCREMENT_PLAYER_NUM":
             return incPlayerQty( state, action );
         case "SAVE_PLAYERS":
-            return updateProgress(addPlayers( state, action ));
+            return navUpdate(updateProgress(addPlayers( state, action )));
         case "EQUAL_SORT":
             return equalise( state );
         case "RANDOM_SORT":

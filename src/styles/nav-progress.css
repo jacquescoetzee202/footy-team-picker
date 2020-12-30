@@ -12,3 +12,8 @@
     align-items: center;
     list-style-type: none;
 }
+
+.current-nav {
+    background-color: Blue;
+    color: white;
+}
