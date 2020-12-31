@@ -10,6 +10,7 @@ import TeamOutput from "./components/TeamOutput";
 import NavProgress from "./components/NavProgress";
 import FourOhFour from './components/FourOhFour';
 import Home from './components/Home';
+import NavArrows from './components/NavArrows/NavArrows';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <h1>footy team picker!</h1>
       </header>
       <NavProgress />
+      <NavArrows />
       <Switch>
         <Route exact path="/">
           <Home />
