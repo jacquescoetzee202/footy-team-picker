@@ -1,5 +1,5 @@
 .nav-list {
-    display: flex;
+    display: none;
     justify-content: space-between;
     margin:0 2em 0 2em;
     padding: 0;

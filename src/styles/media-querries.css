@@ -1,0 +1,11 @@
+@media (min-width: 400px) {
+    .nav-arrows {
+        background-color: pink;
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+    }
+
+}
