@@ -6,13 +6,19 @@ import { ReactComponent as Reset } from "../assets/svg/reset.svg";
 const Header = () => (
     <header className="header">
         <div className="header__logo">
-            <Ball />
-            <h1>team picker</h1>
+            <Ball className="header__logo__svg"/>
+            <h1 className="header__logo__text">team picker</h1>
         </div>
         <div className="header__links">
-            <GitHub/>
-            <Home />
-            <Reset />
+            <button>
+                <Home />
+            </button>
+            <button>
+                <Reset />
+            </button>
+            <a href="https://github.com/jnc202/footy-team-picker" target="__blank">
+                <GitHub/>
+            </a>
         </div>
     </header>
 )
