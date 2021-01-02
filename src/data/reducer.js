@@ -2,7 +2,7 @@ import initialState from "./initial";
 
 import history from "../history";
 
-import routes from "./routes";
+import { routes } from "./routes";
 
 // Reducer helper functions
 const addTeam1 = ( state, action ) => {

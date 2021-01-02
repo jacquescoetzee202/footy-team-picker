@@ -1,4 +1,4 @@
-const routes = [
+export const routes = [
     "/",
     "/set-up/team1",
     "/set-up/team2",
@@ -6,4 +6,10 @@ const routes = [
     "/teams",
 ]
 
-export default routes;
+export const pageNames = [
+    "home",
+    "team 1",
+    "team 2",
+    "players",
+    "teams"
+]

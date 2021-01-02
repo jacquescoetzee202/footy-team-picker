@@ -1,5 +1,7 @@
 import { Component } from "react";
 
+import { pageNames } from "../../data/routes";
+
 class NavArrows extends Component {
     
     constructor(props) {
@@ -20,12 +22,14 @@ class NavArrows extends Component {
     }
     
     render() {
-        return (
-            <>
-                <button onClick={ this.prevClick } disabled={ this.props.currentStage === 1 }>previous</button>
-                <button onClick={ this.nextClick } disabled={ this.props.currentStage === 5 }>next</button>
+        let currentPage = pageNames[ this.props.currentStage -1 ];
 
-            </>
+        return (
+            <div className="nav-arrows">
+                <button onClick={ this.prevClick } disabled={ this.props.currentStage === 1 }>previous</button>
+                <h2>{ currentPage }</h2>
+                <button onClick={ this.nextClick } disabled={ this.props.currentStage === 5 }>next</button>
+            </div>
         );
     }
 }
