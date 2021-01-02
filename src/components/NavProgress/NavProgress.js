@@ -1,9 +1,9 @@
 const NavProgress = ({ progress, currentStage, linkClick }) => {
     return (
         <ul className="nav-list">
-            <li className="nav-list__item">
+            <li className="nav-list__item left-raduis">
                 <button
-                    className={`nav-list__item__button ${currentStage === 1 ? "current-nav" : "" }`} 
+                    className={`nav-list__item__button left-raduis ${currentStage === 1 ? "current-nav" : "" }`} 
                     onClick={ linkClick }
                     data-route="/"
                 >Home</button>
@@ -31,9 +31,9 @@ const NavProgress = ({ progress, currentStage, linkClick }) => {
                     disabled={ !progress.team2 }
                 >players</button>
             </li>
-            <li className="nav-list__item">
+            <li className="nav-list__item right-raduis">
                 <button
-                    className={`nav-list__item__button ${currentStage === 5 ? "current-nav" : "" }`}  
+                    className={`nav-list__item__button right-raduis ${currentStage === 5 ? "current-nav" : "" }`}  
                     onClick={ linkClick }
                     data-route="/teams"
                     disabled={ !progress.players }

@@ -47,7 +47,7 @@ class TeamInput extends Component {
 
         return(
             <div>
-                <h1>Team { this.props.teamInput }</h1>
+                <h2>Team { this.props.teamInput }</h2>
                 <form onSubmit={ this.handleSubmit }>
                     <label htmlFor="team-name">Name:</label>
                     <input

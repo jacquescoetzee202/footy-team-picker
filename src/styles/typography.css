@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: bold;
+    src: url("../assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Lora';
+    font-weight: normal;
+    src: url("../assets/fonts/Lora/Lora-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: 'Lora', "Arial", sans-serif; font-size: 1em;
+    line-height: 1.6; 
+    text-transform: capitalize; 
+}
+
+h1 , h2 {
+    font-family: 'Roboto', "Arial", sans-serif;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 2px black;
+}
+
+h2 {
+    font-size: 2em;
+    text-transform: capitalize;
+}

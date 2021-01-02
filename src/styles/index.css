@@ -1,3 +1,5 @@
+@import "./typography.css";
+@import "./reset-defaults.css";
 @import "./background.css";
 @import "./team-input-card.css";
 @import "./player-input-card.css";
