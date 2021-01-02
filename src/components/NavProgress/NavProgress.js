@@ -6,7 +6,7 @@ const NavProgress = ({ progress, currentStage, linkClick }) => {
                     className={`nav-list__item__button left-raduis ${currentStage === 1 ? "current-nav" : "" }`} 
                     onClick={ linkClick }
                     data-route="/"
-                >Home</button>
+                >home</button>
             </li>
             <li className="nav-list__item">
                 <button

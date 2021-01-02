@@ -11,14 +11,13 @@ import NavProgress from "./components/NavProgress";
 import FourOhFour from './components/FourOhFour';
 import Home from './components/Home';
 import NavArrows from './components/NavArrows';
+import Header from './components/Header';
 
 
 function App() {
   return (
     <Router history={ history }>
-      <header>
-        <h1>footy team picker!</h1>
-      </header>
+      <Header />
       <NavProgress />
       <NavArrows />
       <Switch>
