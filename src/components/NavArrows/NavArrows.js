@@ -11,17 +11,19 @@ class NavArrows extends Component {
     
     nextClick() {
         console.log("next");
+        this.props.navArrowClick(1);
     }
-
+    
     prevClick() {
-        console.log("next");
+        console.log("prev");
+        this.props.navArrowClick(-1);
     }
     
     render() {
         return (
             <>
-                <button onClick={ this.nextClick }>Prev</button>
-                <button onClick={ this.prevClick }>Next</button>
+                <button onClick={ this.nextClick }>next</button>
+                <button onClick={ this.prevClick }>previous</button>
             </>
         );
     }

@@ -178,6 +178,15 @@ const reset = ( state ) => (
     }
 )
 
+const navIncrement = ( state, { increment }) => {
+    
+    console.log(increment);
+    
+    return {
+        ...state
+    }
+}
+
 // Reducer
 const reducer = (state, action) => {
     switch (action.type) {
@@ -199,6 +208,8 @@ const reducer = (state, action) => {
             return navUpdate( state );
         case "START":
             return navUpdate( state );
+        case "NAV_INCREMENT":
+            return navIncrement( state, action );
         default:
             return state;
     }

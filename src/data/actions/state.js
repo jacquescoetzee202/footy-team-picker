@@ -58,3 +58,10 @@ export const updateNavStage = () => (
         type: "NAV_UPDATE",
     }
 )
+
+export const navArrowInc = ( increment ) => (
+    {
+        type: "NAV_INCREMENT",
+        increment: increment,
+    }
+)

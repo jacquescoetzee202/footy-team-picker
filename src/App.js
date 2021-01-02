@@ -10,7 +10,7 @@ import TeamOutput from "./components/TeamOutput";
 import NavProgress from "./components/NavProgress";
 import FourOhFour from './components/FourOhFour';
 import Home from './components/Home';
-import NavArrows from './components/NavArrows/NavArrows';
+import NavArrows from './components/NavArrows';
 
 
 function App() {
