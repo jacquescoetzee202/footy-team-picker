@@ -2,6 +2,8 @@ import { Component } from "react";
 
 import { pageNames } from "../../data/routes";
 
+import { ReactComponent as Next } from "../../assets/svg/next-page-filled.svg";
+
 class NavArrows extends Component {
     
     constructor(props) {
@@ -26,9 +28,15 @@ class NavArrows extends Component {
 
         return (
             <div className="nav-arrows">
-                <button onClick={ this.prevClick } disabled={ this.props.currentStage === 1 }>previous</button>
-                <h2>{ currentPage }</h2>
-                <button onClick={ this.nextClick } disabled={ this.props.currentStage === 5 }>next</button>
+                <button onClick={ this.prevClick } disabled={ this.props.currentStage === 1 }>
+                    <Next className="nav-arrows__prev"/>
+                </button>
+                <div className="nav-arrows__text-box">
+                    <h2 className="nav-arrows__text-box__text">{ currentPage }</h2>
+                </div>
+                <button onClick={ this.nextClick } disabled={ this.props.currentStage === 5 }>
+                    <Next className="nav-arrows__next"/>
+                </button>
             </div>
         );
     }
