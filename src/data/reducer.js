@@ -2,6 +2,8 @@ import initialState from "./initial";
 
 import history from "../history";
 
+import routes from "./routes";
+
 // Reducer helper functions
 const addTeam1 = ( state, action ) => {
     return {
@@ -150,19 +152,19 @@ const navUpdate = ( state ) => {
 
     let currentStage;
 
-    if (currentURL === "/") {
+    if (currentURL === routes[0]) {
         currentStage = 1;
     } 
-    else if (currentURL === "/set-up/team1") {
+    else if (currentURL === routes[1]) {
         currentStage = 2;
     }
-    else if (currentURL === "/set-up/team2") {
+    else if (currentURL === routes[2]) {
         currentStage = 3;
     }
-    else if (currentURL === "/set-up/players") {
+    else if (currentURL === routes[3]) {
         currentStage = 4;
     }
-    else if (currentURL === "/teams") {
+    else if (currentURL === routes[4]) {
         currentStage = 5;
     }
 
@@ -179,11 +181,16 @@ const reset = ( state ) => (
 )
 
 const navIncrement = ( state, { increment }) => {
-    
-    console.log(increment);
+
+    let current = state.currentStage;
+
+    let next = current + increment;
+
+    history.push(routes[next-1]);
     
     return {
-        ...state
+        ...state,
+        currentStage: next,
     }
 }
 

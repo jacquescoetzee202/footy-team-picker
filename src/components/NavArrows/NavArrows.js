@@ -2,8 +2,8 @@ import { Component } from "react";
 
 class NavArrows extends Component {
     
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.nextClick = this.nextClick.bind(this);
         this.prevClick = this.prevClick.bind(this);
@@ -22,8 +22,9 @@ class NavArrows extends Component {
     render() {
         return (
             <>
-                <button onClick={ this.nextClick }>next</button>
-                <button onClick={ this.prevClick }>previous</button>
+                <button onClick={ this.prevClick } disabled={ this.props.currentStage === 1 }>previous</button>
+                <button onClick={ this.nextClick } disabled={ this.props.currentStage === 5 }>next</button>
+
             </>
         );
     }
