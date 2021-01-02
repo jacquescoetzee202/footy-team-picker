@@ -3,6 +3,7 @@
     justify-content: space-between;
     background-color: #971AD1;
     width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .header__logo {
@@ -10,4 +11,27 @@
     display: flex;
     align-items: center;
 }
+
+.header__links {
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.header__links__git, .header__links__reset, .header__links__home {
+    height: 3em;
+    width: 3em;
+}
+
+.header__links__git:hover {
+    transform: scale(1.1);
+}
+
+.header__logo:hover {
+    transform: scale(1.05);
+}
+
+.header__links button:hover {
+    transform: scale(1.1);
+} 
 

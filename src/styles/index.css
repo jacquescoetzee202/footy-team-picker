@@ -1,5 +1,7 @@
+@import "./settings.css";
 @import "./typography.css";
 @import "./reset-defaults.css";
+@import "./general.css";
 @import "./background.css";
 @import "./team-input-card.css";
 @import "./header.css";
@@ -8,3 +10,4 @@
 @import "./nav-progress.css";
 @import "./nav-arrows.css";
 @import "./media-querries.css";
+@import "./home.css";

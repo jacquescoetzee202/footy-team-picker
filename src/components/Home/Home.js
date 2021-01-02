@@ -26,10 +26,10 @@ class Home extends Component {
         const buttonText = inProgress ? "restart" : "start";
 
         return (
-            <>
-                <p>Some info on the start page</p>
-                <button onClick={ this.handleClick }>{ buttonText }</button>
-            </>
+            <div className="home card">
+                <p className="home__text">Some info on the start page</p>
+                <button className="home__button button" onClick={ this.handleClick }>{ buttonText }</button>
+            </div>
         );
     }
 }
