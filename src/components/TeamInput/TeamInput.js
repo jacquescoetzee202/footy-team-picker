@@ -48,7 +48,6 @@ class TeamInput extends Component {
 
         return(
             <div className="team-card card">
-                <h2>Team { this.props.teamInput }</h2>
                 <form className="team-card__form" onSubmit={ this.handleSubmit }>
                     <input
                         id="team-name"
