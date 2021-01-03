@@ -1,6 +1,8 @@
 .btn-group {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 80%;
 }
 
 .btn-group__label {
@@ -8,12 +10,23 @@
     text-transform: capitalize;
 }
 
-.btn-group__btn {
+.btn-group__btns__btn {
     height: 2em;
+    border:1px solid #000000;
+    text-align: center;
+
 }
 
 .selected {
     background-color: blue;
     color: white;
+}
+
+.left-btn {
+    border-radius: 1em 0 0 1em;
+}
+
+.right-btn {
+    border-radius: 0 1em 1em 0;
 }
 
