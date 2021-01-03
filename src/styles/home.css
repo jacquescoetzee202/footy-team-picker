@@ -1,12 +1,5 @@
-.home {
-    background-color: var(--main-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.home__button {
-    
+.card a {
+   color: white; 
 }
 
 .home__text1, .home__text2 {
