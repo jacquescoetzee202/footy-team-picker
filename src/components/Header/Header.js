@@ -3,14 +3,14 @@ import { ReactComponent as GitHub } from "../../assets/svg/github.svg";
 import { ReactComponent as Home } from "../../assets/svg/home.svg";
 import { ReactComponent as Reset } from "../../assets/svg/reset.svg";
 
-const Header = ({ reset, linkClick }) => (
+const Header = ({ reset, homeClick }) => (
     <header className="header">
-        <button className="header__logo">
+        <button onClick={ homeClick } className="header__logo">
             <Ball className="header__logo__svg"/>
             <h1 className="header__logo__text">team picker</h1>
         </button>
         <div className="header__links">
-            <button>
+            <button onClick={ homeClick }>
                 <Home className="header__links__home"/>
             </button>
             <button>

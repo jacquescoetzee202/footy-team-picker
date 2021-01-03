@@ -12,10 +12,9 @@ const mapDispatchToProps = (dispatch) => {
             history.push("/")
             dispatch( stateReset() )
         },
-        linkClick: (event) => {
-            let route = event.currentTarget.dataset.route;
-            history.push( route );
-            dispatch(updateNavStage())
+        homeClick: () => {
+            history.push("/");
+            dispatch(updateNavStage());
         },
     }
 };
