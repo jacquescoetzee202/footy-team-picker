@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/footy-team-picker/static/css/main.4ecd024a.chunk.css",
-    "main.js": "/footy-team-picker/static/js/main.6cbc0fa1.chunk.js",
-    "main.js.map": "/footy-team-picker/static/js/main.6cbc0fa1.chunk.js.map",
+    "main.css": "/footy-team-picker/static/css/main.581ae91a.chunk.css",
+    "main.js": "/footy-team-picker/static/js/main.1bf00c77.chunk.js",
+    "main.js.map": "/footy-team-picker/static/js/main.1bf00c77.chunk.js.map",
     "runtime-main.js": "/footy-team-picker/static/js/runtime-main.258d5217.js",
     "runtime-main.js.map": "/footy-team-picker/static/js/runtime-main.258d5217.js.map",
     "static/js/2.65a368cf.chunk.js": "/footy-team-picker/static/js/2.65a368cf.chunk.js",
@@ -12,7 +12,7 @@
     "index.html": "/footy-team-picker/index.html",
     "service-worker.js": "/footy-team-picker/service-worker.js",
     "service-worker.js.map": "/footy-team-picker/service-worker.js.map",
-    "static/css/main.4ecd024a.chunk.css.map": "/footy-team-picker/static/css/main.4ecd024a.chunk.css.map",
+    "static/css/main.581ae91a.chunk.css.map": "/footy-team-picker/static/css/main.581ae91a.chunk.css.map",
     "static/js/2.65a368cf.chunk.js.LICENSE.txt": "/footy-team-picker/static/js/2.65a368cf.chunk.js.LICENSE.txt",
     "static/media/index.css": "/footy-team-picker/static/media/grass-background.5ec0e224.jpg",
     "static/media/ball.4f93ed13.svg": "/footy-team-picker/static/media/ball.4f93ed13.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.258d5217.js",
     "static/js/2.65a368cf.chunk.js",
-    "static/css/main.4ecd024a.chunk.css",
-    "static/js/main.6cbc0fa1.chunk.js"
+    "static/css/main.581ae91a.chunk.css",
+    "static/js/main.1bf00c77.chunk.js"
   ]
 }
