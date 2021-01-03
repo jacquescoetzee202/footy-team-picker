@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/footy-team-picker/static/css/main.581ae91a.chunk.css",
-    "main.js": "/footy-team-picker/static/js/main.1bf00c77.chunk.js",
-    "main.js.map": "/footy-team-picker/static/js/main.1bf00c77.chunk.js.map",
+    "main.js": "/footy-team-picker/static/js/main.b1967d07.chunk.js",
+    "main.js.map": "/footy-team-picker/static/js/main.b1967d07.chunk.js.map",
     "runtime-main.js": "/footy-team-picker/static/js/runtime-main.258d5217.js",
     "runtime-main.js.map": "/footy-team-picker/static/js/runtime-main.258d5217.js.map",
     "static/js/2.65a368cf.chunk.js": "/footy-team-picker/static/js/2.65a368cf.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.258d5217.js",
     "static/js/2.65a368cf.chunk.js",
     "static/css/main.581ae91a.chunk.css",
-    "static/js/main.1bf00c77.chunk.js"
+    "static/js/main.b1967d07.chunk.js"
   ]
 }
