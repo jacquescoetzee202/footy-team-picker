@@ -3,12 +3,12 @@ const initial = {
     detailed: false,
     team1: {
         name: "",
-        kit_color: "#f44336",
+        kit_color: "#ef0505",
         players: [],
     },
     team2: {
         name: "",
-        kit_color: "#2196f3",
+        kit_color: "#33cc33",
         players: [],
     },
     players: [],

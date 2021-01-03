@@ -9,7 +9,7 @@ class TeamInput extends Component {
 
         this.state = {
             name:"",
-            color:"",
+            color:this.props.color,
         }
 
         this.colorChange = this.colorChange.bind(this);

@@ -8,7 +8,8 @@ const mapStateToProps = ( state ) => {
     return {
         teamInput: 2,
         nextRoute: "players",
-        filledIn: state.team2.name.length > 0,  
+        filledIn: state.team2.name.length > 0,
+        color: state.team2.kit_color,  
     }
 }
 
