@@ -10,6 +10,14 @@
     border-radius: 50%;
 }
 
+.disabled-arrow {
+    background-color: lightgray;
+}
+
+.nav-arrows__next:disabled, .nav-arrows__prev:disabled {
+    background-color:lightgray;
+}
+
 .nav-arrows__prev {
     transform: rotate(180deg);
 }
