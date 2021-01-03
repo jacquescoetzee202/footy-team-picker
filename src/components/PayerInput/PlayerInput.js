@@ -94,7 +94,7 @@ class PlayerInput extends Component {
         }
 
         let addDisable = playerQty > 20 ? true : false;
-        let subtractDisable = playerQty < 4 ? true : false;
+        let subtractDisable = playerQty < 6 ? true : false;
 
         return(
             <>
@@ -102,12 +102,13 @@ class PlayerInput extends Component {
                     <ul className="card__ul">
                         { playerInputs.map(( index ) => (
                                 <li className="card__ul__li card__sub" key={ index }>
-                                    <label className="card__ul__li__label" htmlFor={`player_${index}`}>player { index } name</label>
+                                    <label className="card__ul__li__label" htmlFor={`player_${index}`}>player { index }</label>
                                     <input
                                         className="card__ul__li__input"
                                         required
                                         id={`player_${index}`}
                                         type="text"
+                                        placeholder="Name..."
                                         onChange={ this.nameChange }
                                         value={ this.state[`player_${index}`].name }
                                     >

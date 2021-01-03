@@ -35,3 +35,7 @@ h2 {
     font-size: 1.5em;
     text-transform: capitalize;
 }
+
+input {
+    font-family: 'Lora', "Arial", sans-serif; font-size: 1em;
+}

@@ -12,7 +12,7 @@ const initial = {
         players: [],
     },
     players: [],
-    playerQty: 10,
+    playerQty: 4,
     randomSort: false,
     progress: {
         team1: false,

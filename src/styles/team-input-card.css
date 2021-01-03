@@ -23,4 +23,5 @@
     height: 40px;
     text-align: center;
     margin-top: 1em;
+    font-size: inherit;
 }
