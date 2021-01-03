@@ -1,3 +1,13 @@
 .team-card__color {
+    display: flex;
+}
 
+.team-card__color__picker {
+    margin: var(--margin-M);
+    padding-right: var(--margin-M);
+    padding-bottom: var(--margin-M);
+}
+.team-card__color__kit {
+    margin: var(--margin-M);
+    transform: scale(2.5);
 }

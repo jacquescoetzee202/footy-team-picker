@@ -60,8 +60,15 @@ class TeamInput extends Component {
                     >
                     </input>
                     <div className="team-card__color card__sub">
-                        <CirclePicker color={ this.state.color } onChange={ this.colorChange }/>
-                        <KitFill />
+                        <CirclePicker 
+                            className="team-card__color__picker" 
+                            color={ this.state.color } 
+                            onChange={ this.colorChange }
+                            colors={["#ef0505","#33cc33","#2605ef","#ffabab","#c005ef","#000","#ffE817","#c1feef","#cc6600"]}
+                            width={"180px"}
+                            circleSize={32}
+                        />
+                        <KitFill className="team-card__color__kit" />
                     </div>
                     <button className="button">{ filledIn ? "update" : "add team" }</button>
                 </form>

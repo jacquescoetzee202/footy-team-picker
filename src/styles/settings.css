@@ -1,5 +1,6 @@
 :root {
     --main-color: #971AD1;
     --button-color: #4361FF;
-    --side-margin: 32px;
+    --margin-L: 32px;
+    --margin-M: 16px;
 }
