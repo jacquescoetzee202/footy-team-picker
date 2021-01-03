@@ -9,6 +9,7 @@ const addTeam1 = ( state, action ) => {
     return {
         ...state,
         team1: {
+            ...state.team1,
             name: action.data.name,
             kit_color: action.data.color,
         },
@@ -19,6 +20,7 @@ const addTeam2 = ( state, action ) => {
     return {
         ...state,
         team2: {
+            ...state.team2,
             name: action.data.name,
             kit_color: action.data.color,
         },
