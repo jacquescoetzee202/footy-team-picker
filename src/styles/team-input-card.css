@@ -1,13 +1,25 @@
-.team-card__color {
+.team-card__form {
     display: flex;
+    flex-direction: column;
 }
 
-.team-card__color__picker {
+.team-card__form__color {
+    display: flex;
+    align-items: center;
+}
+
+.team-card__form__color__picker {
     margin: var(--margin-M);
     padding-right: var(--margin-M);
     padding-bottom: var(--margin-M);
 }
-.team-card__color__kit {
+.team-card__form__color__kit {
     margin: var(--margin-M);
     transform: scale(2.5);
+    margin-right: 48px;
+}
+
+.team-card__form__input {
+    height: 40px;
+    text-align: center;
 }

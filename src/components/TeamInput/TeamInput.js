@@ -1,8 +1,7 @@
 import { CirclePicker } from "react-color";
 import { Component } from "react";
 import history from "../../history";
-import { ReactComponent as KitFill } from "../../assets/svg/shirt-fill.svg";
-import { ReactComponent as Kit } from "../../assets/svg/shirt.svg";
+import Kit from "../KitFill";
 
 class TeamInput extends Component {
     constructor(props) {
@@ -50,25 +49,28 @@ class TeamInput extends Component {
         return(
             <div className="team-card card">
                 <h2>Team { this.props.teamInput }</h2>
-                <form onSubmit={ this.handleSubmit }>
-                    <label htmlFor="team-name">Name:</label>
+                <form className="team-card__form" onSubmit={ this.handleSubmit }>
                     <input
                         id="team-name"
                         type="text"
                         onChange={ this.nameChange }
                         required
+                        placeholder="Team name..."
+                        className="team-card__form__input card__sub"
                     >
                     </input>
-                    <div className="team-card__color card__sub">
+                    <div className="team-card__form__color card__sub">
                         <CirclePicker 
-                            className="team-card__color__picker" 
+                            className="team-card__form__color__picker" 
                             color={ this.state.color } 
                             onChange={ this.colorChange }
-                            colors={["#ef0505","#33cc33","#2605ef","#ffabab","#c005ef","#000","#ffE817","#c1feef","#cc6600"]}
+                            colors={["#ef0505","#33cc33","#2605ef","#ffabab","#c005ef","#000","#e6e600","#9999ff","#cc6600"]}
                             width={"180px"}
                             circleSize={32}
                         />
-                        <KitFill className="team-card__color__kit" />
+                        <Kit 
+                            color={ this.state.color }
+                        />
                     </div>
                     <button className="button">{ filledIn ? "update" : "add team" }</button>
                 </form>
