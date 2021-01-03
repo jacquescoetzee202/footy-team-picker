@@ -1,7 +1,7 @@
 const ButtonGroup = ({ handleClick, selected, id, skill }) => {
     return(
         <div className="btn-group">
-            <div className="btn-group__label"><p>{ skill }:</p></div>
+            <div className="btn-group__label"><p>{ skill }</p></div>
             <button 
                 onClick={ handleClick }
                 data-rating={ 1 }

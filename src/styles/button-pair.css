@@ -1,0 +1,11 @@
+.button-pair__btn {
+    margin-left: 1em;
+    margin-right: 1em;
+    flex-grow: 1;
+    width: 200px;
+}
+
+.button-pair {
+    display: flex;
+
+}

@@ -10,7 +10,6 @@
     border: 1px solid black;
     flex-grow: 1;
     align-items: center;
-    list-style-type: none;
 }
 
 .nav-list__item__button {

@@ -1,3 +1,35 @@
 .submit {
     display: block;
 }
+
+.card__ul {
+    margin: 0;
+    margin-top: var(--margin-M);
+    padding: 0;
+}
+
+.card__ul__li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card__ul__li__label {
+    display: block;
+    text-transform: capitalize;
+    margin-top: 0.5em;
+}
+
+.card__ul__li__input {
+    border: 2px solid #D3D3D3;
+    border-radius: 5px;
+}
+
+.card__ul__li__input,
+.card__ul__li__label {
+    width: 80%;
+    margin-bottom: 0.5em;
+    margin-left: var(--margin-M);
+    margin-right: var(--margin-M);
+    text-align: center;
+}

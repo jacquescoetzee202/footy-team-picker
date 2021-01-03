@@ -98,33 +98,36 @@ class PlayerInput extends Component {
 
         return(
             <>
-                <form onSubmit={ this.handleSubmit }>
-                    <ul>
+                <form className="card" onSubmit={ this.handleSubmit }>
+                    <ul className="card__ul">
                         { playerInputs.map(( index ) => (
-                                <li key={ index }>
-                                    Player { index }
-                                        <label htmlFor={`player_${index}`}>Name:</label>
-                                        <input
-                                            required
-                                            id={`player_${index}`}
-                                            type="text"
-                                            onChange={ this.nameChange }
-                                            value={ this.state[`player_${index}`].name }
-                                        >
-                                        </input>
+                                <li className="card__ul__li card__sub" key={ index }>
+                                    <label className="card__ul__li__label" htmlFor={`player_${index}`}>player { index } name</label>
+                                    <input
+                                        className="card__ul__li__input"
+                                        required
+                                        id={`player_${index}`}
+                                        type="text"
+                                        onChange={ this.nameChange }
+                                        value={ this.state[`player_${index}`].name }
+                                    >
+                                    </input>
                                     <ButtonGroup 
                                         handleClick={ this.ratingClick }
                                         selected={ this.state[`player_${index}`].rating }
                                         id={`player_${index}`}
                                         skill="skill"
+                                        className="card__ul__li__button-group"
                                         />
                                 </li>
                             ))
                         }
                     </ul>
-                    <button onClick={ this.handleAdd } disabled={ addDisable }>Add players</button>
-                    <button onClick={ this.handleSubtract } disabled={ subtractDisable }>Remove players</button>
-                    <button className="submit">{ filledIn ? "re-submit" : "submit" }</button>
+                    <div className="button-pair">
+                        <button className="button button-pair__btn" onClick={ this.handleAdd } disabled={ addDisable }>Add players</button>
+                        <button className="button button-pair__btn" onClick={ this.handleSubtract } disabled={ subtractDisable }>Remove players</button>
+                    </div>
+                    <button className="submit button">{ filledIn ? "re-submit" : "submit" }</button>
                 </form>
             </>
         );
