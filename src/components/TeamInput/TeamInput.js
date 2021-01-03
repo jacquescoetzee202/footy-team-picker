@@ -69,6 +69,7 @@ class TeamInput extends Component {
                         />
                         <Kit 
                             color={ this.state.color }
+                            css={"team-card__form__color__kit"}
                         />
                     </div>
                     <button className="button">{ filledIn ? "update" : "add team" }</button>

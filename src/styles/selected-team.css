@@ -1,0 +1,33 @@
+.selected-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selected-team__line {
+    width: 80%;
+    color: lightgray;
+    margin-top: var(--margin-M);
+}
+
+.selected-team__list {
+    padding: 0;
+    width: 80%;
+}
+.selected-team__kit {
+    transform: scale(2);
+    margin-bottom: var(--margin-M);
+    margin-top: var(--margin-M);
+}
+
+.selected-team__name {
+    color: black;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.selected-team__list__player {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}

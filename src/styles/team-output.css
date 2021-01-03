@@ -1,0 +1,3 @@
+.team-output-card > :first-child {
+    margin-top: var(--margin-M);
+}

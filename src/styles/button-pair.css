@@ -7,5 +7,8 @@
 
 .button-pair {
     display: flex;
+}
 
+.selected-sort {
+    border: 4px solid white;
 }
