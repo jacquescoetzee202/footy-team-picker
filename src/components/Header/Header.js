@@ -1,6 +1,5 @@
 import { ReactComponent as Ball } from "../../assets/svg/ball.svg";
 import { ReactComponent as GitHub } from "../../assets/svg/github.svg";
-import { ReactComponent as Home } from "../../assets/svg/home.svg";
 import { ReactComponent as Reset } from "../../assets/svg/reset.svg";
 
 const Header = ({ reset, homeClick }) => (
@@ -10,9 +9,6 @@ const Header = ({ reset, homeClick }) => (
             <h1 className="header__logo__text">team picker</h1>
         </button>
         <div className="header__links">
-            <button onClick={ homeClick }>
-                <Home className="header__links__home"/>
-            </button>
             <button>
                 <Reset 
                     className="header__links__reset"
