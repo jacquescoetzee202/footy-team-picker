@@ -28,7 +28,7 @@ class Home extends Component {
         return (
             <div className="home card">
                 <p className="home__text1">Team Picker - pain free team selection from 2-on-2 to full 11-a-side.</p>
-                <p className="home__text2">Input your team names along with a list of players and the app does the rest. Once created go back edit and re-sort your teams randomly or on ability.</p>
+                <p className="home__text2">Input your team names along with a list of players and the app does the rest. Once generated you can sort your teams randomly or on ability, or update players or team information</p>
                 <p className="home__text2">Dig a little deeper and interigate the <a href="https://github.com/jnc202/footy-team-picker" target="__blank">code</a> behind the app.</p>
                 <button className="home__button button" onClick={ this.handleClick }>{ buttonText }</button>
             </div>

@@ -1,6 +1,5 @@
-@media (min-width: 400px) {
+@media (min-width: 500px) {
     .nav-arrows {
-        background-color: pink;
         display: none;
     }
 
@@ -8,4 +7,23 @@
         display: flex;
     }
 
+}
+
+@media (min-width: 380px) {
+    .team-card__form__color__kit {
+        transform: scale(2.5);
+        padding-right: var(--margin-M);
+    }
+
+    .team-card__form__color__picker {
+        margin: var(--margin-M);
+        justify-content: normal;
+        padding-right: var(--margin-M);
+        padding-bottom: var(--margin-L);
+    }
+
+    .team-card__form__color {
+        flex-direction: row;
+    }
+    
 }

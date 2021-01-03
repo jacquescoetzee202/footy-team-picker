@@ -1,5 +1,9 @@
+#root {
+    margin: 0 var(--margin-M) 0 var(--margin-M);
+}
+
 .card {
-    max-width: 700px;
+    max-width: 500px;
     margin: 0 auto;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
     border-radius: 25px;
@@ -14,7 +18,7 @@
     border: 2px solid #000000;
     border-radius: 25px;
     margin-bottom: var(--margin-M);
-    min-width: 310px;
+    min-width: 250px;
 }
 
 .button {
