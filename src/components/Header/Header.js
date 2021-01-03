@@ -1,9 +1,9 @@
-import { ReactComponent as Ball } from "../assets/svg/ball.svg";
-import { ReactComponent as GitHub } from "../assets/svg/github.svg";
-import { ReactComponent as Home } from "../assets/svg/home.svg";
-import { ReactComponent as Reset } from "../assets/svg/reset.svg";
+import { ReactComponent as Ball } from "../../assets/svg/ball.svg";
+import { ReactComponent as GitHub } from "../../assets/svg/github.svg";
+import { ReactComponent as Home } from "../../assets/svg/home.svg";
+import { ReactComponent as Reset } from "../../assets/svg/reset.svg";
 
-const Header = () => (
+const Header = ({ reset, linkClick }) => (
     <header className="header">
         <button className="header__logo">
             <Ball className="header__logo__svg"/>
@@ -14,7 +14,10 @@ const Header = () => (
                 <Home className="header__links__home"/>
             </button>
             <button>
-                <Reset className="header__links__reset"/>
+                <Reset 
+                    className="header__links__reset"
+                    onClick={ reset }
+                />
             </button>
             <a href="https://github.com/jnc202/footy-team-picker" target="__blank">
                 <GitHub className="header__links__git"/>
